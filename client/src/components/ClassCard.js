@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 
-function ClassCard(props) {
-    console.log(props);
-    return (
-        <div>Card</div>
-    )
-}
+// function ClassCard(props) {
+//     console.log(props);
+//     return (
+//         <div>Card</div>
+//     )
+// }
 
-export default ClassCard;
+// export default ClassCard;
