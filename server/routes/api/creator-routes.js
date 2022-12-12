@@ -38,8 +38,10 @@ router.put('/:id', async (req, res) => {
   Creator.findOneAndUpdate(
     { _id: req.params.id },
     { creatorname: req.body.creatorname,
-      email: req.body.email, 
-      $push: { friends: req.body.friends } },
+      email: req.body.email,
+      password: req.body.password, 
+      // $push: { friends: req.body.friends }
+    },
     { runValidators: true, new: true },
     (err, result) => {
       if (result) {

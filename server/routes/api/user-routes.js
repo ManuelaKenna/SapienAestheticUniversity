@@ -39,7 +39,9 @@ router.put('/:id', async (req, res) => {
     { _id: req.params.id },
     { username: req.body.username,
       email: req.body.email, 
-      $push: { friends: req.body.friends } },
+      password: req.body.password, 
+      // $push: { friends: req.body.friends }
+    },
     { runValidators: true, new: true },
     (err, result) => {
       if (result) {
