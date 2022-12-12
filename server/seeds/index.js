@@ -1,4 +1,4 @@
-const connection = require('../../config/connection');
+const connection = require('../config/connection');
 const { seedAdmin } = require('./admin-seeds');
 const { seedCreator } = require('./creator-seeds');
 const { seedUser } = require('./user-seeds');
