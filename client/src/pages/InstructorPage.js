@@ -4,7 +4,7 @@ function InstructorPage(){
     // get classes by instructor
     return(
         <main>
-            <h2>This is a page for a specific instructors classes</h2>
+            <h2>This is a page for specific instructors classes.</h2>
         </main>
     )
 };

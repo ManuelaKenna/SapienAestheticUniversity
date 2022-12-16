@@ -1,5 +1,6 @@
-const connection = require('../../config/connection');
+const connection = require('../config/connection');
 const { seedAdmin } = require('./admin-seeds');
+const { seedContent } = require('./content-seeds');
 const { seedCreator } = require('./creator-seeds');
 const { seedUser } = require('./user-seeds');
 
@@ -11,6 +12,9 @@ const seedAll = async () => {
 
     await seedAdmin();
     console.log('\n----- ADMIN SEEDED -----\n');
+
+    await seedContent();
+    console.log('\n----- CONTENT SEEDED -----\n');
 
     await seedCreator();
     console.log('\n----- CREATOR SEEDED -----\n');

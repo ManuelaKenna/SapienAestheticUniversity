@@ -1,9 +1,10 @@
-const { User } = require('../../models');
+const { User } = require('../models');
 
 const seedUser = async () => {
 
-    await User.deleteMany({});
+  await User.deleteMany({});
 
+<<<<<<< HEAD
 const data =  await User.insertMany(
       [
         { username: 'Bob', email: 'bob@bob.com', password:'123456' }, 
@@ -12,8 +13,13 @@ const data =  await User.insertMany(
         { username: 'Scott', email: 'Scott@Scott.com', password:'123456' }, 
       ],
     ).then((err) =>
-    err ? console.log(err) : console.log('Inserted'));
+=======
+  const data = await User.create(
+    { username: 'Dan', email: 'Dan@Dan.com', password: 'password12345' },
 
+  ).then((err) =>
+>>>>>>> main
+    err ? console.log(err) : console.log('Inserted'));
 }
 
-module.exports = {seedUser};
+module.exports = { seedUser };
