@@ -15,11 +15,10 @@ const resolvers = {
             throw new AuthenticationError(`The user is not logged in`);
         },
 
-        Content: async(parent, { _id }, context) => {
-            if (context.user) {
-                const userData = await User.findOne({ _id: context.user._id })
-                .select(`-_v -password`)
-                return userData;
+        Content: async(parent, { title }) => {
+            const params = {};
+            if (title) {
+                params.title = title;
             }
             return await Content.findById(params).populate('title');
         }

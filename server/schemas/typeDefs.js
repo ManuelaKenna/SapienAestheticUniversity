@@ -27,7 +27,7 @@ const typeDefs = gql`
         title: String
         description: String
         cost: Float
-        creator: Creator
+        # creator: Creator
         image: String
         quantity: Int
     }

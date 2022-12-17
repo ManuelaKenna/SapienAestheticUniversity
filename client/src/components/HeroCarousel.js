@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function HeroCarousel() {
   return (
-    <>
+  <div>  
  <Carousel>
       <Carousel.Item interval={1000}>
         <img
@@ -12,8 +12,8 @@ function HeroCarousel() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Become a skin care expert.</h3>
+          <p>We offer multiple classes on various topics.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
@@ -23,8 +23,8 @@ function HeroCarousel() {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Explore our list of classes.</h3>
+          <p>You won't regret it.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -34,14 +34,14 @@ function HeroCarousel() {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Make an account to get started.</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            Don't miss out on this exciting opportunity. 
           </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-  </>
+  </div>
   );
 }
 

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container, Modal, Tab } from 'react-bootstrap';
 import SignupForm from './SignupForm';
 import LoginForm from './LoginForm';
+import LOGO from '../assets/Logos/Circle-Black-Sapien-Logo.png';
 
 import Auth from '../utils/Auth';
 
@@ -15,7 +16,7 @@ const AppNavbar = () => {
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            <h1>Sapien Aesthetic University</h1>
+            <img src={LOGO} alt='logo' style={{ width:"100px", height:"100px", display:"flex" }}/>
           </Navbar.Brand>
           
           <Navbar.Toggle aria-controls='navbar' />
@@ -23,14 +24,24 @@ const AppNavbar = () => {
               <Nav className='ml-auto'>
               
                 <Nav.Link as={Link} to='/'>
-                  Search for Classes
+                  Home
                 </Nav.Link>
+
+                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to='/about-us'>
+                  About Us
+                </NavDropdown.Item>
+
+                <NavDropdown.Item as={Link} to='/team'>
+                    Meet the Team
+                  </NavDropdown.Item>
+                </NavDropdown>
 
               {/* if user is logged in */}
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link as={Link} to='/saved'>
-                    See Your Classes
+                    Saved Classes
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>

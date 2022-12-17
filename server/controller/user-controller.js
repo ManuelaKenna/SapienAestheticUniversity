@@ -39,21 +39,6 @@ module.exports = {
         res.json({ token, user });
     },
 
-    async addContent({ user, body }, res) { 
-        console.log(user);
-        try {
-            const updatedContent = await User.findOneAndUpdate(
-                { _id: user._id },
-                { $push: { savedContent: body } },
-                { new: true }
-            );
-            return res.json(updatedContent);
-        } catch (err) {
-            console.log(err);
-            return res.status(400).json(err);
-        }
-    },
-
     async saveContent({ user, body }, res) {
         console.log(user);
         try {
