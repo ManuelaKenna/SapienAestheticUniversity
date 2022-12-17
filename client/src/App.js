@@ -41,12 +41,17 @@ function App() {
   <ApolloProvider  client ={client}>
    <Router>
         <AppNavbar/>
-        <HeroCarousel/>
+    
         <Routes>
           <Route 
             path='/' 
             element={<ClassPage/>} 
           />
+          <Route 
+            path='/' 
+            element={<HeroCarousel/>} 
+          />
+          
           <Route 
             path='/instructor' 
             element={<InstructorPage/>} 
