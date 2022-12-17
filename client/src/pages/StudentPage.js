@@ -102,7 +102,7 @@ function StudentPage() {
     
   );
 }
->>>>>>> main
+
 
 // function StudentPage(){
 //     const [classes, setClass]= useState([
