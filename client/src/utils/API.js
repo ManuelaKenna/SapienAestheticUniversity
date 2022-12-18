@@ -1,18 +1,20 @@
 // save content data for a logged in user
-export const saveContent = (bookData, token) => {
-    return fetch('/api/users', {
+export const saveContent = (contentId) => { //, token
+    console.log(`${contentId} made it here!`)
+    return fetch(`/api/content/saveContent`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        authorization: `Bearer ${token}`,
+        // authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(bookData),
-    });
+      body: JSON.stringify(contentId),  
+    }
+    );
   };
 
-  // remove saved book data for a logged in user
+  // remove saved content data for a logged in user
 export const deleteBook = (bookId, token) => {
-    return fetch(`/api/users/books/${bookId}`, {
+    return fetch(`/api/content/:${bookId}`, {
       method: 'DELETE',
       headers: {
         authorization: `Bearer ${token}`,
