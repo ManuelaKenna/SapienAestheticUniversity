@@ -59,16 +59,16 @@ const resolvers = {
     //     }
     },
         
-    // saveContent: async (parent, args , context) => {
-    //     if (context.user) {
-    //         const updatedUser = await User.findOneAndUpdate(
-    //             { _id: context.user_id },
-    //             { $push: { studentcontent: args._id }},
-    //             { new: true }
-    //         )
-    //         return updatedUser;
-    //     }
-    // },
+    saveContent: async (parent, args , context) => {
+        if (context.user) {
+            const updatedUser = await User.findOneAndUpdate(
+                { _id: context.user_id },
+                { $addToSet: { studentcontent: args._id }},
+                { new: true }
+            )
+            return updatedUser;
+        }
+    },
         
     // removeContent: async (parent, args, context) => {
     //     if (context.content) {

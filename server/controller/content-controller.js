@@ -3,19 +3,19 @@ const { signToken } = require('../utils/auth');
 
 module.exports = {
 
-    async saveContent({ body }, res) {
+    async saveContent({ user, body }, res) {
         console.log(`${body} made it here!`)
         // console.log(user);
         try {
-            const updatedUser = await Content.create(
-                { title: body },
-                // { $addToSet: { studentcontent: body } },
-                // { new: true, runValidators: true }
+            const updatedUser = await User.findOneAndUpdate(
+                { _id: user._id },
+                { $addToSet: { studentcontent: body } },
+                { new: true, runValidators: true }
             );
             return res.json(updatedUser);
         } catch (err) {
             console.log(err);
-            return res.status(409).json(err);
+            return res.status(400).json(err);
         }
     },
 

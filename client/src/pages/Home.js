@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_ALL_CONTENT } from '../utils/Queries';
+import { SAVE_CONTENT } from '../utils/Mutations';
 import { saveContent, deleteBook } from '../utils/API';
 import Auth from '../utils/Auth';
 import HeroCarousel from '../components/HeroCarousel';
@@ -18,21 +19,19 @@ function ClassPage() {
 
     // try {
     console.log(`${contentId} made it here!`)
-    const response = await saveContent(contentId);
+    saveContent(contentId);
 
-    if (!response.ok) {
-      throw new Error('something went wrong!');
-    }
-
-    const updatedUser = await response.json();
-    setUserData(updatedUser);
     //   // upon success, remove book's id from localStorage
     // } catch (err) {
     //   console.error(err);
     // }
   };
 
+    // console.log(`${contentId} made it here!`)
+    // const [savedContent, { loadingMutation, errorMutation, dataMutation }] = useMutation(SAVE_CONTENT);
 
+    // if (loadingMutation) return 'Loading...';
+    // if (errorMutation) return `Error! ${errorMutation.message}`;
 
 
   const { loading, error, data } = useQuery(QUERY_ALL_CONTENT);
@@ -42,8 +41,6 @@ function ClassPage() {
 
   return (
     <div>
-      <HeroCarousel />
-
       {data.AllContent.map((element) => {
         return (
           <Row xs={1} md={3} className="g-4 py-3">
@@ -58,7 +55,7 @@ function ClassPage() {
                     {element.description}
 
                   </Card.Text>
-                  <div key={element._id} onClick={() => handleSaveContent(element._id)}>
+                  <div key={element._id} onClick={() => handleSaveContent({ variables: {_id: element._id} })}>
                   <SaveButton/>
                   </div>
                 </Card.Body>
