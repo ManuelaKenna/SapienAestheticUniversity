@@ -71,8 +71,8 @@ export const ADD_ORDER = gql`
 `;
 
 export const REMOVE_CONTENT = gql`
-   mutation RemoveContent($studentcontent: ID!) {
-    removeContent(studentcontent: $studentcontent) {
+   mutation RemoveContent($contentId: ID!) {
+    RemoveContent(studentcontent: $contentId) {
     studentcontent {
       _id
     }

@@ -70,15 +70,15 @@ const resolvers = {
     //     }
     // },
         
-    removeContent: async (parent, args, context) => {
-        if (context.user) {
-            console.log(`Got to the resolvers ${context.user_id}!`)
+    RemoveContent: async (parent, {contentId}, context) => {
+        // if (context.user) {
+            console.log(`Got to the resolvers ${contentId}!`)
             const updatedContent = await User.findOneAndUpdate(
                 { _id: context.user._id },
-                { $pull: { studentcontent: args._id }}                 
+                { $pull: { studentcontent: contentId._id }}                 
             );
             return updatedContent;
-        }
+        // }
     }
 };
 
