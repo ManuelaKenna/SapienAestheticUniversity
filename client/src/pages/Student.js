@@ -17,7 +17,7 @@ function Student() {
           console.log(element._id)
           return (
             <Col>
-              <Card id={element._id}>
+              <Card id={element._id} key={element._id} >
                 <Card.Img variant="top" src={require("../assets/SpacePicsForArticles/space" + element.image + ".png")} />
                 <Card.Body>
                   <Card.Title>{element.title}</Card.Title>
