@@ -3,7 +3,7 @@
 ## Description  
 We made this website because we wanted to introduce Sapien Aesthetic University. Anyone can use this website to gain more knowledge about the skin care industry and skin health. Sapien Aesthetic University is an online platform for trusted industry skin care professionals to sell educational courses. The courses can be videos, audio, quizzes, or articles. The goal is to provide students short information that makes complicated science easier to understand.
 
-## Mock Up:
+## Mock Up
 The following animation demonstrates the application functionality:
 
 ![SapienAestheticUniversity main page](./Assets/SAU.gif)
