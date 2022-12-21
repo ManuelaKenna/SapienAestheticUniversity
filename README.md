@@ -3,8 +3,7 @@
 ## Description  
 We made this website because we wanted to introduce Sapien Aesthetic University. Anyone can use this website to gain more knowledge about the skin care industry and skin health. Sapien Aesthetic University is an online platform for trusted industry skin care professionals to sell educational courses. The courses can be videos, audio, quizzes, or articles. The goal is to provide students short information that makes complicated science easier to understand.
 
-
-## Homepage Image:
+## Mock Up:
 The following animation demonstrates the application functionality:
 
 ![SapienAestheticUniversity main page](./Assets/SAU.gif)
@@ -21,7 +20,7 @@ As a user I want to search for what I need and get the right information at the 
 * 'WHEN' user clicks 'the heart icon'
 * 'THEN' user can save it on their account
 
-## Technologies:
+## Technologies
 * npm
 * React
 * Mongo 
@@ -38,10 +37,9 @@ As a user I want to search for what I need and get the right information at the 
 * Administrators will be able to track their statistics and all data.
 
 ## Installation Dependencies:
-* npm
-* react
+* Check package.json for installation scripts 
 
-## Links to deployed site and Github
+## Links to Deployed Site and Presentation
 * [Deployed Heroku site]
 * [Git Repository](https://github.com/ManuelaKenna/SapienAestheticUniversity)
 * [Google Presentation](https://docs.google.com/presentation/d/1vnZHXjSPE2f8KeeoVI1MZrVVnOJeHf74a7_mCUHoFsc/edit?usp=sharing)
