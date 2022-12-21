@@ -44,7 +44,7 @@ As a user I want to search for what I need and get the right information at the 
 ## Links to deployed site and Github
 * [Deployed Heroku site]
 * [Git Repository](https://github.com/ManuelaKenna/SapienAestheticUniversity)
-* [Google Presentation] (https://docs.google.com/presentation/d/1vnZHXjSPE2f8KeeoVI1MZrVVnOJeHf74a7_mCUHoFsc/edit?usp=sharing)
+* [Google Presentation](https://docs.google.com/presentation/d/1vnZHXjSPE2f8KeeoVI1MZrVVnOJeHf74a7_mCUHoFsc/edit?usp=sharing)
 
 ## Authors
 * Henry He
