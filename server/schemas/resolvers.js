@@ -46,29 +46,29 @@ const resolvers = {
             return { token, user };
         },
 
-    saveContent: async (parent, { content } , context) => {
-        if (context.user) {
-            const updatedContent = await User.findOneAndUpdate(
-                { _id: context.user_id },
-                { $addToSet: { savedContents: content }},
-                { new: true }
-            )
-            return updatedUser;
-        }
-        throw new AuthenticationError('You need to be logged in!')
-    },
+    // saveContent: async (parent, { content } , context) => {
+    //     if (context.user) {
+    //         const updatedContent = await User.findOneAndUpdate(
+    //             { _id: context.user_id },
+    //             { $addToSet: { savedContents: content }},
+    //             { new: true }
+    //         )
+    //         return updatedUser;
+    //     }
+    //     throw new AuthenticationError('You need to be logged in!')
+    // },
         
-    removeContent: async (parent, { contentId }, context) => {
-        if (context.user) {
-            const updatedUser = await User.findOneAndUpdate(
-                { _id: context.user_id },
-                { $pull: { savedContents: {contentId: contentId} }},
-                { new: true }                 
-            );
-            return updatedUser;
-        }
-        }
+    // removeContent: async (parent, { contentId }, context) => {
+    //     if (context.user) {
+    //         const updatedUser = await User.findOneAndUpdate(
+    //             { _id: context.user_id },
+    //             { $pull: { savedContents: {contentId: contentId} }},
+    //             { new: true }                 
+    //         );
+    //         return updatedUser;
+    //     }
+    //     }
     }
 };
 
-module.exports = resolvers;
+module.exports = resolvers

@@ -20,9 +20,7 @@ var userSchema = new Schema({
     studentcontent: [{
       type: Schema.Types.ObjectId,
       ref: 'content',
-  }],
-    //orders: [Order.schema]
-    
+  }],    
 },
 
 );

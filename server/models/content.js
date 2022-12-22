@@ -15,12 +15,8 @@ var contentSchema = new Schema({
     },
     video: {
         type: String,
-    },
-    creator: [{
-        type: Schema.Types.ObjectId,
-        ref: 'creator',
-    }],
-},
+    }
+ },
 );
 
 const Content = model('content', contentSchema);
