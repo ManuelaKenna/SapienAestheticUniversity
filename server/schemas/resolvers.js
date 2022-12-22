@@ -1,8 +1,6 @@
 const { User, Content } = require(`../models`);
 const { signToken } = require(`../utils/auth`);
 const { AuthenticationError } = require(`apollo-server-express`);
-const stripe = require('stripe'); 
-
 
 const resolvers = {
     Query: {

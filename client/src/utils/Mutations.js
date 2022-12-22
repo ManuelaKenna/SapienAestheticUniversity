@@ -24,39 +24,6 @@ export const ADD_USER = gql`
   }
 `;
 
-// export const ADD_CONTENT = gql`
-//   mutation addContent($content: [ID]!) {
-//     addContent(content: $content) {
-//        content {
-//          _id
-//         title
-//          description
-//          cost
-//         creator
-//       }
-//     }
-//   }
-// `;
-
-
-export const ADD_ORDER = gql`
-  mutation addOrder($content: [ID]!) {
-    addOrder(content: $content) {
-      purchaseDate
-      content {
-        title
-        description
-        cost
-        image
-        video
-        creator {
-          creatorname
-          email
-        }
-      }
-    }
-  }
-`;
 
 export const SAVE_CONTENT = gql`
   mutation saveContent($content: SavedContentInput!) {

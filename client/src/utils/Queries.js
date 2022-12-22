@@ -14,14 +14,6 @@ export const QUERY_ALL_CONTENT = gql`
   }
 `;
 
-export const QUERY_CHECKOUT = gql`
-  query getCheckout($content: [ID]!) {
-    checkout(content: $content) {
-      session
-    }
-  }
-`;
-
 export const GET_USER = gql`
 query getUser {
   getUser {
